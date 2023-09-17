@@ -1,0 +1,20 @@
+{
+  "name": "tiny-webauthn-example-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler publish",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.8.0"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.2.0",
+    "@levischuck/tiny-encodings": "^0.2.1",
+    "@levischuck/tiny-webauthn": "^0.0.5",
+    "hono": "^3.6.3"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules
+secrets.toml
+.dev.vars
+.wrangler
