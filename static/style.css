@@ -6,3 +6,9 @@
   padding: 1em;
   padding-top: 0;
 }
+.footer {
+  width: 40em;
+  margin: auto;
+  text-align: center;
+  margin-top: 1em;
+}

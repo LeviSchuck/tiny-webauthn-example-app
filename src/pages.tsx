@@ -4,6 +4,11 @@ import { jsx } from "hono/jsx";
 import { Credential, User } from "./data";
 import { encodeBase64Url } from "@levischuck/tiny-encodings"
 
+const FOOTER = <div class="footer">
+  <p>This is a demo of <a href="https://github.com/LeviSchuck/tiny-webauthn"><code>@levischuck/tiny-webauthn</code></a>.</p>
+  <p>The source code for this service is at <a href="https://github.com/LeviSchuck/tiny-webauthn-example-app">github:levischuck/tiny-webauthn-example-app</a>.</p>
+</div>
+
 export function signInPage(c: Context): Response {
   return c.html(
     <html>
@@ -19,6 +24,7 @@ export function signInPage(c: Context): Response {
           <button id="sign-in">Sign In</button>
           <div id="status"></div>
         </div>
+        {FOOTER}
         <script type="text/javascript" src="/static/utils.js"></script>
         <script type="text/javascript" src="/static/sign-in.js"></script>
       </body>
@@ -66,6 +72,7 @@ export function homePageLoggedIn(
             })}
           </ul>
         </div>
+        {FOOTER}
         <script type="text/javascript" src="/static/utils.js"></script>
         <script type="text/javascript" src="/static/register.js"></script>
       </body>
@@ -93,6 +100,7 @@ export function homePageNotLoggedIn(c: Context) {
           <button id="sign-in-passkey">Sign In with passkey</button>
           <div id="status"></div>
         </div>
+        {FOOTER}
         <script type="text/javascript" src="/static/utils.js"></script>
         <script type="text/javascript" src="/static/sign-in-passkey.js">
         </script>
@@ -119,6 +127,7 @@ export function registerPage(c: Context) {
           <button id="register">Register</button>
           <div id="status"></div>
         </div>
+        {FOOTER}
         <script type="text/javascript" src="/static/utils.js"></script>
         <script type="text/javascript" src="/static/register.js"></script>
       </body>
