@@ -7,6 +7,7 @@ import { encodeBase64Url } from "@levischuck/tiny-encodings"
 const FOOTER = <div class="footer">
   <p>This is a demo of <a href="https://github.com/LeviSchuck/tiny-webauthn"><code>@levischuck/tiny-webauthn</code></a>.</p>
   <p>The source code for this service is at <a href="https://github.com/LeviSchuck/tiny-webauthn-example-app">github:levischuck/tiny-webauthn-example-app</a>.</p>
+  <p>Users, Credentials, and Sessions live at most 24 hours.</p>
 </div>
 
 export function signInPage(c: Context): Response {
